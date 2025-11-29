@@ -27,15 +27,3 @@ Great for learning and basic troubleshooting.
 
 ## 📁 Repository Structure
 
-Install dependencies:
-
---------------- bash ------------------------
-pip install -r requirements.txt
-python firewall_audit.py rules.csv
-python subnet_scan.py 192.168.1.0/24
-
-
-5. Scroll down → commit with message:
-   Add README for Python network automation repo
-
-Click Commit changes
