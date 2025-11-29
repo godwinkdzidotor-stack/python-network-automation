@@ -25,5 +25,28 @@ Great for learning and basic troubleshooting.
 
 ---
 
-## 📁 Repository Structure
+## 🗂 Repository Structure
+├── README.md
+├── requirements.txt
+├── firewall_audit.py
+└── subnet_scan.py
 
+
+
+---
+
+## 📦 Usage
+
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
+
+python firewall_audit.py rules.csv
+
+python subnet_scan.py 192.168.1.0/24
+
+⚠️ Disclaimer
+
+These scripts are for educational and lab use only.
+Do not use them on production networks without authorization.
