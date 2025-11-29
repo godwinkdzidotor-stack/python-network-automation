@@ -1,0 +1,17 @@
+---
+
+## 🚀 Usage
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+
+Run firewall audit:
+
+python firewall_audit.py rules.csv
+
+
+Run subnet scan:
+
+python subnet_scan.py 192.168.1.0/24
