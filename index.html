@@ -42,6 +42,51 @@
     }
     .inner{position:relative;z-index:1;padding:20px 22px 24px}
     @media(min-width:900px){.inner{padding:24px 28px 28px}}
+
+    /* Top nav buttons row */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      border: 1px solid rgba(148,163,184,0.3);
+      border-radius: 12px;
+      color: #e2e8f0;
+      font-size: 13px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.25s ease-out;
+    }
+    .home-btn:hover {
+      background: linear-gradient(135deg, #1e293b, #334155);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    }
+    .close-btn {
+      padding: 8px 16px;
+      background: linear-gradient(135deg, #1e1b4b, #312e81);
+      border: 1px solid rgba(148,163,184,0.3);
+      border-radius: 12px;
+      color: #e2e8f0;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.25s ease-out;
+    }
+    .close-btn:hover {
+      background: linear-gradient(135deg, #312e81, #4338ca);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+    }
+
     .top{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:18px}
     .brand{display:flex;align-items:center;gap:12px}
     .avatar{
@@ -84,11 +129,25 @@
       border:1px solid rgba(55,65,81,.9);padding:10px 12px 12px;
       font-size:12px;display:grid;gap:8px;
     }
+
     .badge-row{display:flex;flex-wrap:wrap;gap:6px}
-    .badge{
-      font-size:11px;padding:3px 8px;border-radius:999px;
-      background:rgba(15,23,42,.96);border:1px solid rgba(148,163,184,.9);color:var(--text-muted);
+
+    /* ✅ Unified pill styling for repo + card foot */
+    .badge,
+    .foot-pill{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:5px 9px;                 /* matches .pill */
+      border-radius:999px;
+      background:rgba(15,23,42,.95);
+      border:1px solid rgba(148,163,184,.55);
+      color:var(--text-muted);
+      font-size:11px;
+      line-height:1.2;
+      white-space:nowrap;
     }
+
     .tabs{margin-top:8px}
     .tab-nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
     .tab-btn{
@@ -125,10 +184,7 @@
     }
     .card-body ul{margin-top:6px;padding-left:16px;display:grid;gap:4px}
     .card-foot{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px;font-size:11px}
-    .foot-pill{
-      padding:3px 8px;border-radius:999px;
-      background:rgba(15,23,42,.96);border:1px solid rgba(55,65,81,.95);color:var(--text-muted);
-    }
+
     a.link{color:#14b8a6;text-decoration:none;font-size:12px}
     a.link:hover{text-decoration:underline}
   </style>
@@ -136,6 +192,17 @@
 <body>
   <main class="shell">
     <div class="inner">
+
+      <!-- Top nav buttons: Back + Close -->
+      <div class="nav-buttons">
+        <a href="https://godwinkdzidotor-stack.github.io/" class="home-btn">
+          ⭠ Back to Homepage
+        </a>
+        <button class="close-btn" onclick="window.close();">
+          ✖ Close Page
+        </button>
+      </div>
+
       <header class="top">
         <div class="brand">
           <div class="avatar">GD</div>
